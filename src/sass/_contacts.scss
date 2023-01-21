@@ -1,4 +1,4 @@
-.visual-hidden {
+.visually-hidden {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -11,21 +11,70 @@
     margin: -1px;
 }
 
-.city-contacts::before {
+.day-and-time-contacts::before,
+.day-and-time-contacts::after{
     content: "";
+    display: block;
     width: 100%;
     border: 1px solid #E1E1E1
 }
+.contacts-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+    outline: none;
+    border: 0 solid transparent;
+    border-radius: 10px;
+    background-color: #f8d24e;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    width: 196px;
+    justify-content: center;
+}
 
-.day-and-time-contacts::before{
-    content: "";
-    width: 100%;
-    border: 1px solid #E1E1E1
+.contacts-btn:hover,
+.contacts-btn:focus {
+    background: #0A8817;
+}
+
+.contacts-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+    outline: none;
+    border: 0 solid transparent;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+    width: 196px;
+    justify-content: center;
+}
+
+.contacts-button:hover,
+.contacts-button:focus {
+    border: 2px solid #0A8817;
 }
 
 @media screen and (max-width: 479px) {
-    .section-conacts{
+    .contacts-conteiner{
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info-contacts:not(:last-child){
+        margin-bottom: 16px;
     }
     .info-contacts{
         background: #FCFCFC;
@@ -35,11 +84,13 @@
         padding-right: 32px;
         padding-bottom: 24px;
         padding-left: 32px;
-        column-gap: 16px;
     }
     .categories-contacts{
-        font-family: 'Montserrat';
-        font-style: normal;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 22px;
+        padding-right: 22px;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 12px;
         line-height: 120%;
@@ -53,8 +104,7 @@
 
     }
     .city-name-contacts{
-        font-family: 'Montserrat';
-        font-style: normal;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 186%;
@@ -62,17 +112,17 @@
         color: #131313;
     }
     .city-address-contacts{
-        font-family: 'Montserrat';
-        font-style: normal;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 183%;
         letter-spacing: 0.04em;    
         color: #D6936D;
+        margin-top: 20px;
+        margin-bottom: 8px;
     }
     .day-contacts{
-        font-family: 'Montserrat';
-        font-style: normal;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 183%;
@@ -80,19 +130,30 @@
         color: #D6936D;
     }
     .time-contacts{
-        font-family: 'Montserrat';
-        font-style: normal;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 186%;
         color: #907E82;
     }
+    .morning-time{
+        margin-bottom: 8px;
+    }
+    .menu-contacts{
+        margin-top: 24px;
+    }
     .contacts-phone-mail{
-        font-family: 'Montserrat';
-        font-style: normal;
+        font-family: var(--primary-font);
         font-weight: 500;
         font-size: 14px;
         line-height: 150%;
         color: #131313;
+    }
+    
+    .contacts-buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
